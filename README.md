@@ -105,26 +105,41 @@ Subject information can be updated by sending PUT requests with a simple payload
 
 ### UI TEST
 
-Ui test has been written in Robotframework, so to be able to run robot, you need to have robotframework and robotframework-selenium2library installed. If you have install requirement.txt through pip it should be ok but if you havenot done so, you can install them seperately also but remember to check the versions from requirement.txt
+UI test has been written in Robotframework, so to be able to run robot, you need to have `robotframework` and `robotframework-selenium2library` installed. If you have install requirement.txt through pip, it should be ok. If you haven't done so, you can install them seperately also. Remember to check the versions from requirement.txt
 
-To run robot, navigate to ui_test folder through command line or terminal and just run `robot -d reports registration.robot` first to test the registration and then `robot -d reports login.robot` to test the login.
+To run robot, navigate to `ui_test` folder through command line or terminal and just run `robot -d reports registration.robot` first to test the registration and then `robot -d reports login.robot` to test the login.
 
 ### API TEST
 
+#### Framework used
+
+- Pytest
+  Read about pytest on (https://docs.pytest.org/en/6.2.x/)
+
+- unittest
+  Read about unite test on (https://docs.python.org/3/library/unittest.html)
+
+#### Libraries used
+
+- requests
+  Requests is a HTTP library for python. Read more about requests on (https://docs.python-requests.org/en/latest/)
+
 PIP install requirement.txt if you have not done so yet. Follow the instruction to run the app and keep it running for the API testing.
 
-POST and PUT requests are not working for the app so it is importand for you to create user from UI with following data first.
+POST and PUT requests are not working for the app so it is important for you to create user from UI with following data first.
 
-Username = user1
-Password = user1
-First Name = firstname
-Family Name = lastname
-Phone number = 123456
+- Username = user1
+- Password = user1
+- First Name = firstname
+- Family Name = lastname
+- Phone number = 123456
 
-API test has been done in 2 approachs each can be found inside `approach1` and `approach2` folders respectively. Both folders are inside `tests/api_test` folder
+API test has been done in 2 approachs each one can be found inside `approach1` and `approach2` folders respectively. Both folders are inside `tests/api_test` folder
 
-Approach 1 is the recomended one and its simply the pytest.
-To run the test simply navigate to `tests/api_test/approach1` folder from command line or termainal and run `pytest test_api.py`
+Approach 1 is the recomended one and it is done with pytest framework.
 
-For approach 2, which can be found in approach2 folder, `apitest.py` contains normal api testing functions which just returns responses. Unit test of those functions and various api testing also has been done in `test_api.py`.
-To run test navigate to `tests/api/approach2`folder from command line or terminal and run `python3 test_api.py`
+To run the test, simply navigate to `tests/api_test/approach1` folder from command line or termainal and run `pytest test_api.py`
+
+For approach 2, which can be found in `approach2` folder, `apitest.py` contains normal api testing functions which responses of api endpoints. Unit test of those functions and various api endpoints testing also has been done in `test_api.py`.
+
+To run the test, navigate to `tests/api/approach2`folder from command line or terminal and run `python3 test_api.py`
