@@ -2,7 +2,7 @@ import unittest
 import apitest
 
 class TestApi(unittest.TestCase):
-    USER_DATA = {"username":"user1", "password":"user1", "firstname":"firstname", "lastname":"lastname", "phone", 123456}
+    USER_DATA = {"username":"user1", "password":"user1", "firstname":"firstname", "lastname":"lastname", "phone": 123456}
     WRONG_DATA = {"username":"newuser", "password":"passsword", "firstname":"first name", "lastname":"lastname"}
     BASE_URL = "http://localhost:8080"
 
