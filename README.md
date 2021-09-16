@@ -107,7 +107,7 @@ Subject information can be updated by sending PUT requests with a simple payload
 
 UI test has been written in Robotframework, so to be able to run robot, you need to have `robotframework` and `robotframework-selenium2library` installed. If you have install requirement.txt through pip, it should be ok. If you haven't done so, you can install them seperately also. Remember to check the versions from requirement.txt
 
-### Note: ### you need to have firefox installed and 'geckodriver' executable to be in PATH
+### Note: you need to have firefox installed and 'geckodriver' executable to be in PATH
 
 To run robot, navigate to `ui_test` folder through command line or terminal and just run `robot -d reports registration.robot` first to test the registration and then `robot -d reports login.robot` to test the login.
 
