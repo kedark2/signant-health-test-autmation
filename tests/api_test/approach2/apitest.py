@@ -16,7 +16,6 @@ def getting_users(host_address, token):
 
 def getting_users_without_token(host_address):
     response = requests.get(f"{host_address}/api/users")
-    print("stat ", response.status_code)
     return response
 
 def getting_users_wrong_token(host_address):

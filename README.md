@@ -107,6 +107,8 @@ Subject information can be updated by sending PUT requests with a simple payload
 
 UI test has been written in Robotframework, so to be able to run robot, you need to have `robotframework` and `robotframework-selenium2library` installed. If you have install requirement.txt through pip, it should be ok. If you haven't done so, you can install them seperately also. Remember to check the versions from requirement.txt
 
+### Note: ### you need to have firefox installed and 'geckodriver' executable to be in PATH
+
 To run robot, navigate to `ui_test` folder through command line or terminal and just run `robot -d reports registration.robot` first to test the registration and then `robot -d reports login.robot` to test the login.
 
 ### API TEST
@@ -114,17 +116,17 @@ To run robot, navigate to `ui_test` folder through command line or terminal and 
 #### Framework used
 
 - Pytest
-  
+
   Read about pytest on (https://docs.pytest.org/en/6.2.x/)
 
 - unittest
-  
+
   Read about unite test on (https://docs.python.org/3/library/unittest.html)
 
 #### Libraries used
 
 - requests
-  
+
   Requests is a HTTP library for python. Read more about requests on (https://docs.python-requests.org/en/latest/)
 
 PIP install requirement.txt if you have not done so yet. Follow the instruction to run the app and keep it running for the API testing.
@@ -145,4 +147,4 @@ To run the test, simply navigate to `tests/api_test/approach1` folder from comma
 
 For approach 2, which can be found in `approach2` folder, `apitest.py` contains normal api testing functions which responses of api endpoints. Unit test of those functions and various api endpoints testing also has been done in `test_api.py`.
 
-To run the test, navigate to `tests/api/approach2`folder from command line or terminal and run `python3 test_api.py`
+To run the test, navigate to `tests/api/approach2`folder from command line or terminal and run `python test_api.py` or ``
