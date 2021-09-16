@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.7.4 on darwin)" generated="20210916 00:21:10.429" rpa="false" schemaversion="2">
+<suite id="s1" name="Login" source="/Users/raj/GitHub/signant-health-test-autmation/tests/ui_test/login.robot">
+<test id="s1-t1" name="Register through web portal">
+<kw name="Open homepage">
+<doc>User can open homepage</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>http://0.0.0.0:8080/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210916 00:21:10.616" level="INFO">Opening browser 'firefox' to base url 'http://0.0.0.0:8080/'.</msg>
+<msg timestamp="20210916 00:21:10.617" level="INFO">Firefox driver log is always forced to to: /Users/raj/GitHub/signant-health-test-autmation/tests/ui_test/reports/geckodriver-14.log</msg>
+<status status="PASS" starttime="20210916 00:21:10.616" endtime="20210916 00:21:12.586"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Demo app</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210916 00:21:12.587" endtime="20210916 00:21:12.599"/>
+</kw>
+<status status="PASS" starttime="20210916 00:21:10.616" endtime="20210916 00:21:12.599"/>
+</kw>
+<kw name="Login to see user information">
+<doc>User can login and logout</doc>
+<kw name="Click Link" library="Selenium2Library">
+<arg>Log In</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210916 00:21:12.600" level="INFO">Clicking link 'Log In'.</msg>
+<status status="PASS" starttime="20210916 00:21:12.600" endtime="20210916 00:21:12.640"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210916 00:21:12.640" level="INFO">Typing text 'user3' into text field 'username'.</msg>
+<status status="PASS" starttime="20210916 00:21:12.640" endtime="20210916 00:21:12.684"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210916 00:21:12.684" level="INFO">Typing text 'user2' into text field 'password'.</msg>
+<status status="PASS" starttime="20210916 00:21:12.684" endtime="20210916 00:21:12.727"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>Log In</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210916 00:21:12.727" level="INFO">Clicking button 'Log In'.</msg>
+<status status="PASS" starttime="20210916 00:21:12.727" endtime="20210916 00:21:12.785"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>1 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210916 00:21:12.785" endtime="20210916 00:21:12.785"/>
+</kw>
+<kw name="Page Should Not Contain Button" library="Selenium2Library">
+<arg>Log In</arg>
+<doc>Verifies button ``locator`` is not found from current page.</doc>
+<msg timestamp="20210916 00:21:13.790" level="INFO">Current page does not contain button 'Log In'.</msg>
+<msg timestamp="20210916 00:21:15.801" level="INFO">Current page does not contain input 'Log In'.</msg>
+<status status="PASS" starttime="20210916 00:21:12.786" endtime="20210916 00:21:15.801"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>User Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210916 00:21:20.993" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210916 00:21:19.831" endtime="20210916 00:21:20.994"/>
+</kw>
+<msg timestamp="20210916 00:21:20.999" level="FAIL">Page should have contained text 'User Information' but did not.</msg>
+<status status="FAIL" starttime="20210916 00:21:15.801" endtime="20210916 00:21:20.999"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${username}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20210916 00:21:21.000" endtime="20210916 00:21:21.000"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Log Out</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20210916 00:21:21.000" endtime="20210916 00:21:21.000"/>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<arg>Log Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210916 00:21:21.000" endtime="20210916 00:21:21.000"/>
+</kw>
+<status status="FAIL" starttime="20210916 00:21:12.599" endtime="20210916 00:21:21.001"/>
+</kw>
+<doc>Tests if user can Log In and view information</doc>
+<status status="FAIL" starttime="20210916 00:21:10.615" endtime="20210916 00:21:21.001">Page should have contained text 'User Information' but did not.</status>
+</test>
+<kw name="Close All Browsers" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210916 00:21:21.003" endtime="20210916 00:21:22.424"/>
+</kw>
+<doc>This is the test case for Login</doc>
+<status status="FAIL" starttime="20210916 00:21:10.431" endtime="20210916 00:21:22.424"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
