@@ -114,14 +114,17 @@ To run robot, navigate to `ui_test` folder through command line or terminal and 
 #### Framework used
 
 - Pytest
+  
   Read about pytest on (https://docs.pytest.org/en/6.2.x/)
 
 - unittest
+  
   Read about unite test on (https://docs.python.org/3/library/unittest.html)
 
 #### Libraries used
 
 - requests
+  
   Requests is a HTTP library for python. Read more about requests on (https://docs.python-requests.org/en/latest/)
 
 PIP install requirement.txt if you have not done so yet. Follow the instruction to run the app and keep it running for the API testing.
